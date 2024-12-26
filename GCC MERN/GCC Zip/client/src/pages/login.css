@@ -1,0 +1,156 @@
+/* Dynamic Login Page - Tailwind-inspired */
+
+/* General Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f1c40f; /* Golden */
+  --background-color: #000000; /* Black */
+  --hover-color: #ffd700; /* Bright Gold */
+  --error-color: #e74c3c; /* Red */
+}
+
+/* Body Styling */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, var(--background-color), #1a1a1a);
+  font-family: 'Arial', sans-serif;
+  color: var(--primary-color);
+}
+
+/* Login Container */
+.login-container {
+  background-color: var(--background-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(241, 196, 15, 0.6);
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading Styling */
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  width: 100%;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--hover-color);
+  box-shadow: 0 0 5px var(--hover-color);
+}
+
+/* Button Styling */
+button {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--hover-color);
+  color: var(--background-color);
+}
+
+.register-button {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  margin-top: 1rem;
+}
+
+.register-button:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+/* Error Message */
+.error-message {
+  font-size: 0.875rem;
+  color: var(--error-color);
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button,
+  input {
+    font-size: 0.875rem;
+  }
+}
+  

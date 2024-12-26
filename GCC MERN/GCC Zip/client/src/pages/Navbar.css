@@ -1,0 +1,127 @@
+/* navbar.css */
+:root {
+  --navbar-bg: #333;
+  --navbar-text-color: #fff;
+  --navbar-link-color: #fff;
+  --navbar-link-hover-color: #007bff;
+  --button-bg: #ff5733;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text-color);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--navbar-text-color);
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.navbar-links a {
+  color: var(--navbar-link-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: var(--navbar-link-hover-color);
+}
+
+.navbar-links button {
+  background-color: var(--button-bg);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-links button:hover {
+  background-color: #e13c1e;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    background-color: var(--navbar-bg);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .navbar-links button {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--navbar-text-color);
+  margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+  }
+}

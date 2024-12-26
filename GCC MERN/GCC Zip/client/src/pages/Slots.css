@@ -1,0 +1,39 @@
+.slots-container {
+  padding: 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: 18px;
+}
+
+.slots-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.slot-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  width: 200px;
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+button:hover {
+  background-color: #45a049;
+}

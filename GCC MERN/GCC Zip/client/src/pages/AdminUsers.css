@@ -1,0 +1,102 @@
+/* AdminUsers.css */
+.admin-users-container {
+    padding: 20px;
+    margin: 0;
+    height: 100vh; /* Ensures full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch; /* Ensures the container takes full width */
+    background-color: #f4f7fc;
+    box-sizing: border-box; /* Ensures padding is included in the height and width calculation */
+  }
+  
+  .admin-users-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%; /* Ensures the table takes the full width of its container */
+    height: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    padding: 12px 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #3f5d73;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  table td {
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button.delete {
+    background-color: #f44336;
+  }
+  
+  button.delete:hover {
+    background-color: #e53935;
+  }
+  
+  /* Make sure body and html elements are also full height */
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .admin-users-container {
+      padding: 15px;
+    }
+  
+    table th, table td {
+      padding: 8px 15px;
+    }
+  
+    button {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+  }
+  

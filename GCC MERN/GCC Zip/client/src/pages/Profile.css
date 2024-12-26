@@ -1,0 +1,123 @@
+/* General Reset and Body Styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: goldenrod;
+  font-family: "Arial", sans-serif;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container Styling */
+.dynamic-container {
+  width: 90%;
+  max-width: 1200px;
+  border: 3px solid goldenrod;
+  border-radius: 15px;
+  padding: 30px;
+  background-color: black;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  color: goldenrod;
+}
+
+/* Header Section */
+.dynamic-header {
+  background: linear-gradient(90deg, goldenrod, black);
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Section for Dynamic Content */
+.dynamic-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dynamic-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #333;
+  color: goldenrod;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.dynamic-row:nth-child(even) {
+  background-color: #444;
+}
+
+.dynamic-cell {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Form Input Styling */
+.dynamic-input {
+  background-color: #222;
+  border: 1px solid goldenrod;
+  padding: 12px;
+  border-radius: 5px;
+  color: goldenrod;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.dynamic-input:focus {
+  outline: none;
+  border: 1px solid #daa520;
+  box-shadow: 0 0 5px #daa520;
+}
+
+/* Buttons */
+.dynamic-button {
+  background-color: goldenrod;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 20px auto;
+}
+
+.dynamic-button:hover {
+  background-color: #daa520;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dynamic-container {
+    padding: 15px;
+  }
+
+  .dynamic-header {
+    font-size: 1.5rem;
+  }
+
+  .dynamic-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .dynamic-button {
+    width: 90%;
+  }
+}
